@@ -43,5 +43,6 @@ console.log(add1(4));
 
 
 const add2=function t(n) {
-    return num+2
+    return n + 2
 }
+add2(1)
