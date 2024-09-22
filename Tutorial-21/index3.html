@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body style="background-color: black; color: aliceblue;">
+
+    <ul class="language">
+        <li>Javscript</li>
+    </ul>
+
+</body>
+<script>
+    function addLanguage(langName) {//traversing ,, not optimal
+        const li=document.createElement('li')
+        li.innerHTML=`${langName}`
+        document.querySelector(".language").
+        appendChild(li)
+        
+    }
+    addLanguage("python")
+    addLanguage("ruby")
+
+
+
+    //to optimize it
+    function addoptimize(langName) {
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector(".language").appendChild(li)
+        
+    }
+    addoptimize("java")
+
+
+    //to edit  //not optimal
+    const edit=document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML="Mojo"
+
+    //optimal edit
+    const newli=document.querySelector("li")
+    newli.textContent="mojo"
+    edit.replaceWith(newli)
+
+    //m3
+    const secondLang=document.querySelector("li:last-child")
+    secondLang.outerHTML='<li>TypeScript</li>'
+
+
+    //remove
+    const remove=document.querySelector("li:last-child")
+    remove.remove()
+
+</script>
+
+</html>
