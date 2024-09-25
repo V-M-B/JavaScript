@@ -1,12 +1,11 @@
+//Events
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EVENTS</title>
 </head>
-
 <body style="background-color: #414141; color: aliceblue;">
     <h2>Amazing image</h2>
     <div>
@@ -29,51 +28,38 @@
             <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
         </ul>
     </div>
-
 </body>
-
 <Script>
     //     //attachEvent() M-3  //old-method
     //     //jQuery//old-method
-
     //     //method-1 not the optimal
     //     // document.getElementById('owl').onclick=function(){
     //     //     alert('owl is clicked')
     //     // }
-
     //     //method-2 //optimal approach
     //     document.getElementById('owl').addEventListener('click', function () {
     //         // alert('owlllll')
     //     }, false)//default it will be false
-
     //     document.getElementById('owl').addEventListener('click', function (e) {
     //         // console.log(e);
     //         //2 types of events 1.browser event and 2.envrmt(where the mouse was clicked)
     //     })
-
     //     //**type, timestamp, defaultprevented, target 
     //     //** toElement , srcElement, currentTarget, clientX, clientY ,
     //     //** screenX ,screenY , altkey, ctrlKey , shiftkey , keycode
-
-
     //     //** Event Propogation ->event bubbling(false)   ->eventcapturing(false)
-
     //     document.getElementById('images').addEventListener('click', function (e) {
     //         console.log("click inside the ul");
     //     }, false)
-
     //     document.getElementById('owl').addEventListener('click', function (e) {
     //         console.log("owl click me");
     //         e.stopPropagation()
     //     }, false)
-
     // document.getElementById('google').addEventListener("click",function(e){
-
     //     e.preventDefault()
     //     e.stopPropagation()
     //     console.log("g clicked");
     // }, false)
-
     document.querySelector('#images').addEventListener('click', function (e) {
         console.log(e.target.tagName);
         if (e.target.tagName === 'IMG') {
@@ -81,13 +67,8 @@
             let removeIt = e.target.parentNode//trageted it 
             removeIt.remove()//removed it //M1
         }
-
         //selecting the li it removes that img , if we select the ul then the whole imgs is removed to overcome this we use "CHECKS"
         
     }, false)
-
-
-
 </Script>
-
 </html>

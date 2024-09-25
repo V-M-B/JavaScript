@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Chai aur code</h1>
+    <button id="Stop">Stop</button>
+</body>
+<script>
+    //function
+    //setTimeout
+    // setTimeout(function () {
+    //     console.log("hi ");
+
+    // },2000)
+
+    const sayname = function () {
+        console.log("VMB");
+    }
+    //    document.querySelector('h1').innerHTML='best js series'
+    const changeheading = (function () {
+        document.querySelector('h1').innerHTML = 'best js series'
+
+    })
+    // setTimeout(changeheading,2000)//REFRENCES
+    const c = setTimeout(changeheading, 2000)//REFRENCES
+
+
+
+    document.querySelector('#Stop').addEventListener('click', function () {
+
+        clearTimeout(c)
+        console.log('STOPPED');
+
+    })
+
+</script>
+
+</html>
